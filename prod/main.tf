@@ -27,8 +27,8 @@ module "cognito_pool" {
   userpool_name           = "${local.env}-${var.userpool_name}"
   provider_name           = "${local.env}-${var.provider_name}"
   sp_metadata_url         = var.sp_metadata_url
-  callback_urls           = ["https://${local.env}.${var.domain_name}/api/auth/callback/cognito", "http://localhost:3000/api/auth/callback/cognito"]
-  logout_urls             = ["https://${local.env}.${var.domain_name}", "http://localhost:3000"]
+  callback_urls           = ["https://prod.gaiinplatform.com/api/auth/callback/cognito", "http://localhost:3000/api/auth/callback/cognito"]
+  logout_urls             = ["https://prod.gaiinplatform.com", "http://localhost:3000"]
   create_pre_auth_lambda  = var.create_pre_auth_lambda
   use_saml_idp            = var.use_saml_idp
   domain_name             = "${local.env}.${var.domain_name}"
